@@ -1,0 +1,8 @@
+# executables
+chat_server
+discovery_server
+client
+
+# compiled files
+*.out
+*.o
