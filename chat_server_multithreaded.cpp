@@ -16,9 +16,9 @@
 #include <ctime>
 #include <fstream>
 #include <chrono>
-#include "json.hpp"
+#include "nlohmann/json.hpp"
 
-#define PORT 5000
+#define PORT 5001
 #define DISCOV_IP "127.0.0.1"
 #define DISCOV_PORT 6000
 
@@ -589,7 +589,7 @@ int main(){
     address.sin_addr.s_addr = INADDR_ANY;
     address.sin_port = htons(PORT);
 
-    if(bind(server_fd, (sockaddr*)&address, sizeof(address))<0){
+    if(::bind(server_fd, (sockaddr*)&address, sizeof(address))<0){
         cerr << "Error occured during binding." <<endl;
         close(server_fd);
         return 1;

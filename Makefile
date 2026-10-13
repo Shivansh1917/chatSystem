@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -std=c++17 -pthread -Wall
+CXXFLAGS = -std=c++17 -pthread -Wall -I/opt/homebrew/opt/nlohmann-json/include
 
 TARGETS = chat_server discovery_server client
 

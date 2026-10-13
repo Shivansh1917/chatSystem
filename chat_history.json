@@ -1,0 +1,18 @@
+{
+    "sinu": [
+        {
+            "from": "SERVER",
+            "message": "sinu has joined the chat.",
+            "timestamp": "2026-10-13 14:43:47",
+            "to": "",
+            "type": "broadcast"
+        },
+        {
+            "from": "sinu",
+            "message": "hi",
+            "timestamp": "2026-10-13 14:43:59",
+            "to": "",
+            "type": "broadcast"
+        }
+    ]
+}

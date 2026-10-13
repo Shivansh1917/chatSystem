@@ -10,7 +10,7 @@
 #include <netinet/in.h>
 #include <errno.h>
 #include <fstream>
-#include "json.hpp"
+#include "nlohmann/json.hpp"
 
 #define PORT 6000
 #define BUFFER_SIZE 1024
@@ -283,7 +283,7 @@ int main(){
     address.sin_addr.s_addr = INADDR_ANY;
     address.sin_port = htons(PORT);
 
-    if(bind(server_fd, (sockaddr*)&address, sizeof(address))<0){
+    if(::bind(server_fd, (sockaddr*)&address, sizeof(address))<0){
         cerr << "Error occured during binding." <<endl;
         close(server_fd);
         return 1;
